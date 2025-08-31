@@ -1,5 +1,7 @@
 
 import GeneralInfoForm from './GeneralInfoForm'
+import EducationalInfoForm from './EducationalInfoForm'
+import PracticalExpForm from './PracticalExpForm'
 import './App.css'
 
 function App() {
@@ -9,6 +11,8 @@ function App() {
       <div>
         <h1>My CV</h1>
         <GeneralInfoForm />
+        <EducationalInfoForm />
+        <PracticalExpForm />
       </div>
     </>
   )

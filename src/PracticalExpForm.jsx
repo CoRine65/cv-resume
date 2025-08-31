@@ -23,7 +23,7 @@ function PracticalExpForm() {
 
 
     return (
-        <div>
+        <div className='card'>
             <h2>Practical Experience Information</h2>
             <form onSubmit={handleSubmit}>
                 <div>

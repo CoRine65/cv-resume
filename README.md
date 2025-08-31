@@ -13,3 +13,7 @@ Steps:
 --- commit ----
 - EducationalInfoForm: school name, title fo study, date of study
 - PracticalExpForm: company name, position title, main responsibilities, Date From and Date Until
+----- commit ---------
+- imports to app.jsx
+- css styling 
+-------- commit --------

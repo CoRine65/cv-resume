@@ -19,7 +19,7 @@ function EducationalInfoForm() {
 
 
     return (
-        <div>
+        <div className='card'>
             <h2>Educational Information</h2>
             <form onSubmit={handleSubmit}>
                 <div>

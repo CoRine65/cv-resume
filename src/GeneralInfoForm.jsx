@@ -18,7 +18,7 @@ function GeneralInfoForm() {
   
   
   return (
-    <div>
+    <div className='card'>
         <h2>General Information</h2>
         <form onSubmit={handleSubmit}>
             <div> 
