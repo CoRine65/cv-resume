@@ -1,8 +1,7 @@
 //general form for: name, email, phone number
-import React, { useState } from 'react';
-
-function GeneralInfoForm() {
+function GeneralInfoForm({ generalInfo, setGeneralInfoForm}) {
     //adding states
+    /*
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [phone, setPhone] = useState('');
@@ -14,20 +13,19 @@ function GeneralInfoForm() {
         setName('');
         setEmail('');
         setPhone('');
-    };
-  
+    };*/
   
   return (
     <div className='card'>
         <h2>General Information</h2>
-        <form onSubmit={handleSubmit}>
+        
             <div> 
                 <label htmlFor='name'>Name: </label>
                 <input
                   type='text'
                   id='name'
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
+                  value={generalInfo.name}
+                  onChange={(e) => setGeneralInfoForm({...generalInfo, name: e.target.value})}
                 />
             </div>
             <div>
@@ -35,8 +33,8 @@ function GeneralInfoForm() {
                 <input 
                   type='email'
                   id='email'
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
+                  value={generalInfo.email}
+                  onChange={(e) => setGeneralInfoForm({...generalInfo, email: e.target.value})}
                 />
             </div>
             <div>
@@ -44,13 +42,12 @@ function GeneralInfoForm() {
                 <input 
                   type='phone'
                   id='phone'
-                  value={phone}
-                  onChange={(e) => setPhone(e.target.value)}
+                  value={generalInfo.phone}
+                  onChange={(e) => setGeneralInfoForm({...generalInfo, phone: e.target.value})}
                 />
             </div>
-            <button type='submit'>Submit</button>
-        </form>
-    </div>
+        </div>
+   
   );
 }
 
