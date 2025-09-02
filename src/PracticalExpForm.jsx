@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
 
 //education form: school name, title fo study, and date of study
-function PracticalExpForm() {
+function PracticalExpForm({practical, setPractical}) {
     //add states
+    /*
     const [companyName, setCompanyName] = useState('');
     const [positionTitle, setPositionTitle] = useState('');
     const [mainRespon, setMainRespon] = useState('');
@@ -20,19 +20,18 @@ function PracticalExpForm() {
         setFromDate('');
         setToDate('');
     };
-
+*/
 
     return (
         <div className='card'>
             <h2>Practical Experience Information</h2>
-            <form onSubmit={handleSubmit}>
                 <div>
                     <label htmlFor='companyName'>Company Name: </label>
                     <input
                         type='text'
                         id='companyName'
-                        value={companyName}
-                        onChange={(e) => setCompanyName(e.target.value)}
+                        value={practical.companyName}
+                        onChange={(e) => setPractical({...practical, companyName: e.target.value})}
                     />
                 </div>
                 <div>
@@ -40,8 +39,8 @@ function PracticalExpForm() {
                     <input
                         type='text'
                         id='positionTitle'
-                        value={positionTitle}
-                        onChange={(e) => setPositionTitle(e.target.value)}
+                        value={practical.positionTitle}
+                        onChange={(e) => setPractical({...practical, positionTitle: e.target.value})}
                     />
                 </div>
                 <div>
@@ -49,8 +48,8 @@ function PracticalExpForm() {
                     <input
                         type='text'
                         id='mainRespon'
-                        value={mainRespon}
-                        onChange={(e) => setMainRespon(e.target.value)}
+                        value={practical.mainRespon}
+                        onChange={(e) => setPractical({...practical, mainRespon: e.target.value})}
                     />
                 </div>
                 <div>
@@ -58,8 +57,8 @@ function PracticalExpForm() {
                     <input 
                         type='date'
                         id='fromDate'
-                        value={fromDate}
-                        onChange={(e) => setFromDate(e.target.value)}
+                        value={practical.fromDate}
+                        onChange={(e) => setPractical({...practical, fromDate: e.target.value})}
                     />
                 </div>
                 <div>
@@ -67,12 +66,10 @@ function PracticalExpForm() {
                     <input 
                         type='date'
                         id='toDate'
-                        value={toDate}
-                        onChange={(e) => setToDate(e.target.value)}
+                        value={practical.toDate}
+                        onChange={(e) => setPractical({...practical, toDate: e.target.value})}
                     />
                 </div>
-                <button type='submit'>Submit</button>
-            </form>
         </div>
 
     )

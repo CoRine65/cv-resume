@@ -1,53 +1,49 @@
-//general form for: name, email, phone number
-function GeneralInfoForm({ generalInfo, setGeneralInfoForm}) {
-    //adding states
-    /*
-    const [name, setName] = useState('');
-    const [email, setEmail] = useState('');
-    const [phone, setPhone] = useState('');
-    
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        console.log({name, email, phone});
+import React from 'react';
 
-        setName('');
-        setEmail('');
-        setPhone('');
-    };*/
-  
+function GeneralInfoForm({ generalInfo, setGeneralInfo }) {
   return (
-    <div className='card'>
-        <h2>General Information</h2>
-        
-            <div> 
-                <label htmlFor='name'>Name: </label>
-                <input
-                  type='text'
-                  id='name'
-                  value={generalInfo.name}
-                  onChange={(e) => setGeneralInfoForm({...generalInfo, name: e.target.value})}
-                />
-            </div>
-            <div>
-                <label htmlFor='email'>Email: </label>
-                <input 
-                  type='email'
-                  id='email'
-                  value={generalInfo.email}
-                  onChange={(e) => setGeneralInfoForm({...generalInfo, email: e.target.value})}
-                />
-            </div>
-            <div>
-                <label htmlFor='phone'>Phone: </label>
-                <input 
-                  type='phone'
-                  id='phone'
-                  value={generalInfo.phone}
-                  onChange={(e) => setGeneralInfoForm({...generalInfo, phone: e.target.value})}
-                />
-            </div>
-        </div>
-   
+    <form className="card">
+      <h2>General Information</h2>
+
+      <div>
+        <label htmlFor="name">Name:</label>
+        <input
+          type="text"
+          id="name"
+          value={generalInfo.name}
+          onChange={(e) =>
+            setGeneralInfo({ ...generalInfo, name: e.target.value })
+          }
+          placeholder="Enter your full name"
+        />
+      </div>
+
+      <div>
+        <label htmlFor="email">Email:</label>
+        <input
+          type="email"
+          id="email"
+          value={generalInfo.email}
+          onChange={(e) =>
+            setGeneralInfo({ ...generalInfo, email: e.target.value })
+          }
+          placeholder="Enter your email"
+        />
+      </div>
+
+      <div>
+        <label htmlFor="phone">Phone:</label>
+        <input
+          type="tel"
+          id="phone"
+          value={generalInfo.phone}
+          onChange={(e) =>
+            setGeneralInfo({ ...generalInfo, phone: e.target.value })
+          }
+          placeholder="Enter your phone number"
+        />
+      </div>
+    </form>
   );
 }
 

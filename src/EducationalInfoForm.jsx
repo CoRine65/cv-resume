@@ -1,34 +1,16 @@
-import React, { useState } from 'react';
 
 //education form: school name, title fo study, and date of study
-function EducationalInfoForm() {
-    //add states
-    const [schoolName, setSchoolName] = useState('');
-    const [studyTitle, setStudyTitle] = useState('');
-    const [dateStudy, setDateStudy] = useState('');
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-
-        console.log({schoolName, studyTitle, dateStudy});
-
-        setSchoolName('');
-        setStudyTitle('');
-        setDateStudy('');
-    };
-
-
+function EducationalInfoForm({education, setEducation}) {
     return (
         <div className='card'>
             <h2>Educational Information</h2>
-            <form onSubmit={handleSubmit}>
                 <div>
                     <label htmlFor='schoolName'>School Name: </label>
                     <input
                         type='text'
                         id='schoolName'
-                        value={schoolName}
-                        onChange={(e) => setSchoolName(e.target.value)}
+                        value={education.schoolName}
+                        onChange={(e) => setEducation({ ...education, schoolName: e.target.value})}
                     />
                 </div>
                 <div>
@@ -36,8 +18,8 @@ function EducationalInfoForm() {
                     <input
                         type='text'
                         id='studyTitle'
-                        value={studyTitle}
-                        onChange={(e) => setStudyTitle(e.target.value)}
+                        value={education.titleStudy}
+                        onChange={(e) => setEducation({ ...education, titleStudy: e.target.value})}
                     />
                 </div>
                 <div>
@@ -45,12 +27,10 @@ function EducationalInfoForm() {
                     <input
                         type='text'
                         id='dateStudy'
-                        value={dateStudy}
-                        onChange={(e) => setDateStudy(e.target.value)}
+                        value={education.dateStudy}
+                        onChange={(e) => setEducation({ ...education, dateStudy: e.target.value})}
                     />
                 </div>
-                <button type='submit'>Submit</button>
-            </form>
         </div>
 
     )

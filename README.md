@@ -21,3 +21,4 @@ Steps:
 - In order to display the submitted information App.jsx needs to hold the state and pass it down.
     - update App.jsx to hold the states by creating instance of the components, and retaining the value: lifting the state up. moving from child to parent
     - update / double check compnonets
+    [error:] could not type into the input fields: mismatching name consistencies.

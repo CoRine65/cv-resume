@@ -4,6 +4,7 @@ body {
   background-color: #f0f4f8; /* soft pastel blue-gray */
   margin: 0;
   padding: 40px 20px;
+  
   display: flex;
   flex-direction: column;
   align-items: center; 
@@ -48,6 +49,7 @@ input, textarea {
   font-size: 1rem;
   background-color: #f9f9f9;
   transition: border-color 0.2s;
+  color: #620a44;
 }
 
 input:focus, textarea:focus {
@@ -56,7 +58,7 @@ input:focus, textarea:focus {
 }
 button {
   background-color: #c387bc;
-  color: white;
+  color: rgb(153, 86, 86);
   padding: 10px 20px;
   border: none;
   border-radius: 8px;

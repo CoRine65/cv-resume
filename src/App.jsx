@@ -64,12 +64,8 @@ function App() {
 
           <button onClick={() => setSubmitted(false)}>Edit</button>
         </div>
-      )};
+      )}
     </>
   )
-
-
-
 }
-
 export default App
